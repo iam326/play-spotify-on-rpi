@@ -1,5 +1,25 @@
 # play-spotify-on-rpi
 
+## 環境
+
+```
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Raspbian
+Description:  Raspbian GNU/Linux 9.8 (stretch)
+Release:  9.8
+Codename: stretch
+
+$ uname -a
+Linux raspberrypi 4.9.59-v7+ #1047 SMP Sun Oct 29 12:19:23 GMT 2017 armv7l GNU/Linux
+
+$ python3 --version
+Python 3.5.3
+
+$ pip3 --version
+pip 9.0.1 from /usr/lib/python3/dist-packages (python 3.5)
+```
+
 ## Setup
 
 ### raspotify の Setup
