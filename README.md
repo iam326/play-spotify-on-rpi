@@ -26,3 +26,8 @@ OPTIONS="--device hw:1,0"
 VOLUME_ARGS="--enable-volume-normalisation --linear-volume --initial-volume=70"
 ```
 
+### Spotify App の Setup
+
+1. Spotify for Developers の Dashboard から CREATE AN APP する
+1. EDIT SETTINGS から Redirect URIs に `http://127.0.0.1:8080/` を追加 & 保存する
+
