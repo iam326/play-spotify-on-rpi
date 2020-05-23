@@ -44,10 +44,51 @@ OPTIONS="--device hw:1,0"
 
 # 音量の自動調整
 VOLUME_ARGS="--enable-volume-normalisation --linear-volume --initial-volume=70"
+...
+
+$ sudo systemctl restart raspotify
 ```
 
 ### Spotify App の Setup
 
 1. Spotify for Developers の Dashboard から CREATE AN APP する
 1. EDIT SETTINGS から Redirect URIs に `http://127.0.0.1:8080/` を追加 & 保存する
+
+### 音声関連
+
+```
+// マイクのカード番号とデバイス番号の確認 -> カード: 0, デバイス: 0
+$ arecord -l
+**** ハードウェアデバイス CAPTURE のリスト ****
+カード 0: Device [USB PnP Audio Device], デバイス 0: USB Audio [USB Audio]
+  サブデバイス: 1/1
+  サブデバイス #0: subdevice #0
+
+// 音声の録音
+$ arecord -D plughw:0,0 test.wav
+
+// スピーカーのカード番号とデバイス番号を確認 -> カード: 1, デバイス: 0
+$ aplay -l
+**** ハードウェアデバイス PLAYBACK のリスト ****
+カード 1: ALSA [bcm2835 ALSA], デバイス 0: bcm2835 ALSA [bcm2835 ALSA]
+サブデバイス: 7/7
+サブデバイス #0: subdevice #0
+サブデバイス #1: subdevice #1
+サブデバイス #2: subdevice #2
+サブデバイス #3: subdevice #3
+サブデバイス #4: subdevice #4
+サブデバイス #5: subdevice #5
+サブデバイス #6: subdevice #6
+...
+
+// 音声の再生
+$ aplay -D plughw:1,0 test.wav
+
+// PyAudio の install (pip3 install は試していない)
+$ sudo apt-get update
+$ sudo apt-get install python3-pyaudio
+
+// NumPy の install 
+// $ ... 既に入っていたので別途確認が必要
+```
 
