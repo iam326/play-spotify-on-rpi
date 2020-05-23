@@ -98,7 +98,6 @@ if __name__ == '__main__':
     pass
   except Exception as err:
     print(err)
-    pass
 
   del display
   GPIO.cleanup()
