@@ -1,9 +1,15 @@
+# -*- coding: utf-8 -*-
 import RPi.GPIO as GPIO
 import numpy as np
 from math import ceil
 from time import sleep
 
 from FFTGenerator import FFTGenerator
+
+"""
+[参考]
+https://www.hiramine.com/physicalcomputing/raspberrypi3/webiopi_matrixled.html
+"""
 
 class FFTDisplay():
   def __init__(self, pin_ano, pin_cat):

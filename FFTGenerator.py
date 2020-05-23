@@ -1,5 +1,12 @@
+# -*- coding: utf-8 -*-
 import pyaudio
 import numpy as np
+
+"""
+[参考]
+https://note.com/mokuichi/n/n70d61237e6c7
+https://tam5917.hatenablog.com/entry/2019/04/28/125857
+"""
 
 RATE = 22000 # 22kHz
 CHUNK = 1024
