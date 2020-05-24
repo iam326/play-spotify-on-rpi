@@ -1,5 +1,9 @@
 # play-spotify-on-rpi
 
+## 配線図
+
+<img src="https://raw.github.com/wiki/iam326/play-spotify-on-rpi/images/wiring-diagram.png" width="480px">
+
 ## 環境
 
 ```
